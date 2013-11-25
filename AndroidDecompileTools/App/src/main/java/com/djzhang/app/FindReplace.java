@@ -30,7 +30,8 @@ public class FindReplace {
     private static final String APK_PUBLIC_XML_FOLD =
             "/Volumes/SHARE/MacSystem/Home/Users/djzhang/DevIntellijIdea/apk-decompile/Projects/qq2013_4.5.2.1605_android/App/src/main/res/values";
     private static final String SRC_RESOURCE_ID_JAVA_FILE =
-            "/Volumes/SHARE/MacSystem/Home/Users/djzhang/DevIntellijIdea/apk-decompile/Projects/qq2013_4.5.2.1605_android/App/src/main/java/com/tencent/mobileqq/utils";
+            "/Volumes/SHARE/MacSystem/Home/Users/djzhang/DevIntellijIdea/apk-decompile/Projects/qq2013_4.5.2.1605_android/App/src/main/java/com/dataline/util";
+    //"/Volumes/SHARE/MacSystem/Home/Users/djzhang/DevIntellijIdea/apk-decompile/Projects/qq2013_4.5.2.1605_android/App/src/main/java/com/tencent/mobileqq/utils";
 
     public static File xml = new File(String.format("%s/public.xml", APK_PUBLIC_XML_FOLD));    //XML路径
     public static File file = new File(SRC_RESOURCE_ID_JAVA_FILE);    //待替换的源码文件夹
