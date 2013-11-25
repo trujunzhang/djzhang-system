@@ -27,8 +27,10 @@ public class FindReplace {
     public Map<String, String> resources = new HashMap<String, String>(); // key:id value:R.id.bg
 
     // "D:/qq"
-    private static final String APK_PUBLIC_XML_FOLD = "";
-    private static final String SRC_RESOURCE_ID_JAVA_FILE = "D:/qq/mobileqq.src";
+    private static final String APK_PUBLIC_XML_FOLD =
+            "/Volumes/SHARE/MacSystem/Home/Users/djzhang/DevIntellijIdea/apk-decompile/Projects/qq2013_4.5.2.1605_android/App/src/main/res/values";
+    private static final String SRC_RESOURCE_ID_JAVA_FILE =
+            "/Volumes/SHARE/MacSystem/Home/Users/djzhang/DevIntellijIdea/apk-decompile/Projects/qq2013_4.5.2.1605_android/App/src/main/java/com/tencent/mobileqq/utils";
 
     public static File xml = new File(String.format("%s/public.xml", APK_PUBLIC_XML_FOLD));    //XML路径
     public static File file = new File(SRC_RESOURCE_ID_JAVA_FILE);    //待替换的源码文件夹
@@ -129,8 +131,6 @@ public class FindReplace {
      * 递归遍历目录文件
      *
      * @param file
-     * @param resourceContent
-     * @param replaceContent
      */
     public void findFileList(File file) {
         File[] files = file.listFiles();

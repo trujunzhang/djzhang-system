@@ -20,19 +20,5 @@ android {
         minSdkVersion 7
         targetSdkVersion 19
     }
-    buildTypes {
-        release {
-            runProguard true
-            proguardFile getDefaultProguardFile('proguard-android-optimize.txt')
-        }
-    }
-    productFlavors {
-        defaultFlavor {
-            proguardFile 'proguard-rules.txt'
-        }
-    }
-}
 
-dependencies {
-	compile 'com.android.support:appcompat-v7:+'
 }
