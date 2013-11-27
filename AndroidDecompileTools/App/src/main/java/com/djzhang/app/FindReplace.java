@@ -26,15 +26,21 @@ public class FindReplace {
 
     public Map<String, String> resources = new HashMap<String, String>(); // key:id value:R.id.bg
 
-    // "D:/qq"
-    private static final String APK_PUBLIC_XML_FOLD =
-            "/Volumes/SHARE/MacSystem/Home/Users/djzhang/DevIntellijIdea/apk-decompile/Projects/qq2013_4.5.2.1605_android/App/src/main/res/values";
-    private static final String SRC_RESOURCE_ID_JAVA_FILE =
-            "/Volumes/SHARE/MacSystem/Home/Users/djzhang/DevIntellijIdea/apk-decompile/Projects/qq2013_4.5.2.1605_android/App/src/main/java/com/dataline/util";
-    //"/Volumes/SHARE/MacSystem/Home/Users/djzhang/DevIntellijIdea/apk-decompile/Projects/qq2013_4.5.2.1605_android/App/src/main/java/com/tencent/mobileqq/utils";
 
-    public static File xml = new File(String.format("%s/public.xml", APK_PUBLIC_XML_FOLD));    //XML路径
-    public static File file = new File(SRC_RESOURCE_ID_JAVA_FILE);    //待替换的源码文件夹
+    static {
+        //int type = HistroyList.QQ2013_452_1605_ANDROID;
+        int type = HistroyList.BBM_FOR_ANDROID;
+
+        APK_PUBLIC_XML_FOLD = HistroyList.getApkPublicFold(type);
+        SRC_RESOURCE_ID_JAVA_FOLD = HistroyList.getSrcResourceIdJavaFold(type);
+    }
+
+    // "D:/qq"
+    private static String APK_PUBLIC_XML_FOLD;
+    private static String SRC_RESOURCE_ID_JAVA_FOLD;
+
+    public static File xml = new File(APK_PUBLIC_XML_FOLD);    //XML路径
+    public static File file = new File(SRC_RESOURCE_ID_JAVA_FOLD);    //待替换的源码文件夹
 
     public static void main(String[] args) {
         long start = System.currentTimeMillis();
